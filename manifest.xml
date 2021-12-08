@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://android.googlesource.com/" name="aosp" review="https://android-review.googlesource.com/"/>
+  <remote fetch="https://github.com/frol82" name="github"/>
+  
+  <default remote="github" revision="refs/heads/nougat" sync-j="4"/>
+  
+  <project name="n-amlogic_abi_cpp" path="abi/cpp" revision="79d023a3e8fc1a713b45b85494127b6d11ffadbe"/>
+  <project name="n-amlogic_art" path="art" revision="df11276bfe8ccd937d6ef04ba59c269144e47449"/>
+  <project name="n-amlogic_bionic" path="bionic" revision="5948068828d014bbb247ca009cd637f2cd1200a9"/>
+  <project name="n-amlogic_bootable_recovery" path="bootable/recovery" revision="80d21568675a806cca55cb26de9ef21adf089edd"/>
+  <project name="n-amlogic_common" path="common" revision="49708dea2e0cb429d0b73bc65ccc05c7711bec51"/>
+  <project name="n-amlogic_build" path="build" revision="cfacb36fc6b4e3000c334cceb8c52cdd32a278a6">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+  </project>
+    <linkfile dest="Android.bp" src="root.bp"/>
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
+  </project>
+  <project name="n-amlogic_cts" path="cts" revision="ead426e5c6ce73ce72c0c6bb8f8fcb1dca35c686"/>
+
+</manifest>
